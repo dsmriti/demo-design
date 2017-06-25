@@ -1,0 +1,44 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Login page</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg-login">
+  <ion-grid>
+  <ion-row>
+    <ion-col col-offset-3 col-6 class="margin-center">
+  <img src="../assets/images/trillbit-logo.svg">
+</ion-col>
+</ion-row>
+
+   <p class="p-text">Create Account</p>
+
+    <ion-item>
+      <ion-input type="text" placeholder="Username"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input type="password" placeholder="Password"></ion-input>
+    </ion-item>
+
+
+  <button ion-button round full (click)="movetolist()" class="m-20">Sign Up</button>
+  <p class="p-text">OR</p>
+  <p class="p-text m-5">Sign Up With</p>
+  <ion-list class="social-logo m-20">
+  <ion-icon class="p-5" name="logo-facebook"></ion-icon>
+  <ion-icon class="p-5" name="logo-googleplus"></ion-icon>
+  <ion-icon class="p-5" name="logo-twitter"></ion-icon>
+</ion-list>
+</ion-grid>
+</ion-content>

@@ -1,0 +1,71 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content  class="card-background-page bg-whole">
+  <ion-card >
+      <img src="../assets/images/banner.jpg"/>
+      <div class="card-title">TRILLBIT</div>
+      <div class="card-subtitle">Unleash the power of your device through sound</div>
+    </ion-card>
+    <ion-grid>
+  <ion-row>
+   <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+      <ion-card class="bg-card" (click)="movetocoupon()">
+        <ion-icon name="ios-cash-outline" class="t-icon"></ion-icon>
+        <ion-item class="card-text">
+         <p class="t-text">Coupons</p>
+        </ion-item>
+       </ion-card>
+    </ion-col>
+    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+      <ion-card class="bg-card" (click)="movetoadvert()">
+        <ion-icon name="ios-images-outline" class="t-icon"></ion-icon>
+        <ion-item class="card-text">
+         <p class="t-text">Adverts</p>
+        </ion-item>
+       </ion-card>
+    </ion-col>
+    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+      <ion-card class="bg-card" (click)="movetoinfo()">
+        <ion-icon name="ios-list" class="t-icon"></ion-icon>
+        <ion-item class="card-text">
+         <p class="t-text">Info</p>
+        </ion-item>
+       </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+   <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+      <ion-card class="bg-card" (click)="movetorecommend()">
+        <ion-icon name="ios-contacts-outline" class="t-icon"></ion-icon>
+        <ion-item class="card-text">
+         <p class="t-text">Contact</p>
+        </ion-item>
+       </ion-card>
+    </ion-col>
+    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+      <ion-card class="bg-card">
+        <ion-icon name="ios-cube-outline" class="t-icon"></ion-icon>
+        <ion-item class="card-text">
+         <p class="t-text">Offers</p>
+        </ion-item>
+       </ion-card>
+    </ion-col>
+    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+      <ion-card class="bg-card">
+        <ion-icon name="ios-chatboxes-outline" class="t-icon"></ion-icon>
+        <ion-item class="card-text">
+         <p class="t-text">Feedback</p>
+        </ion-item>
+       </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+</ion-content>
