@@ -1,32 +1,24 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HomePage } from '../pages/home/home';
-
-import { CoupongeneratePage } from '../pages/coupongenerate/coupongenerate';
-
 
 /**
- * Generated class for the CouponPage page.
+ * Generated class for the CoupongeneratePage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-coupon',
-  templateUrl: 'coupon.html',
+  selector: 'page-coupongenerate',
+  templateUrl: 'coupongenerate.html',
 })
-export class CouponPage {
+export class CoupongeneratePage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad CouponPage');
+    console.log('ionViewDidLoad CoupongeneratePage');
   }
-  movetogenerate(){
-  this.navCtrl.push(CoupongeneratePage);
-  }
-
 
 }

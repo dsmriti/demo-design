@@ -10,6 +10,7 @@ import { CouponPage } from '../pages/coupon/coupon';
 import { InfoPage } from '../pages/info/info';
 import { RecommendPage } from '../pages/recommend/recommend';
 import { AdvertPage } from '../pages/advert/advert';
+import { CoupongeneratePage } from '../pages/coupongenerate/coupongenerate';
 
 
 
@@ -25,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CouponPage,
     InfoPage,
     RecommendPage,
-    AdvertPage
+    AdvertPage,
+    CoupongeneratePage
 
   ],
   imports: [
@@ -41,7 +43,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     CouponPage,
     InfoPage,
     RecommendPage,
-    AdvertPage
+    AdvertPage,
+    CoupongeneratePage
   ],
   providers: [
     StatusBar,
