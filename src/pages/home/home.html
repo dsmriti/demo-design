@@ -15,7 +15,7 @@
     </ion-card>
     <ion-grid>
   <ion-row>
-   <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+   <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6 >
       <ion-card class="bg-card" (click)="movetocoupon()">
         <ion-icon name="ios-cash-outline" class="t-icon"></ion-icon>
         <ion-item class="card-text">
@@ -23,42 +23,46 @@
         </ion-item>
        </ion-card>
     </ion-col>
-    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+    <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
       <ion-card class="bg-card" (click)="movetoadvert()">
         <ion-icon name="ios-images-outline" class="t-icon"></ion-icon>
         <ion-item class="card-text">
-         <p class="t-text">Adverts</p>
+         <p class="t-text">Advertisement</p>
         </ion-item>
        </ion-card>
     </ion-col>
-    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
+    </ion-row>
+    <ion-row>
+    <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
       <ion-card class="bg-card" (click)="movetoinfo()">
-        <ion-icon name="ios-list" class="t-icon"></ion-icon>
+        <ion-icon name="ios-locate-outline" class="t-icon"></ion-icon>
         <ion-item class="card-text">
-         <p class="t-text">Info</p>
+         <p class="t-text">Nearby Info</p>
         </ion-item>
        </ion-card>
     </ion-col>
-  </ion-row>
-  <ion-row>
-   <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4>
+
+
+   <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
       <ion-card class="bg-card" (click)="movetorecommend()">
         <ion-icon name="ios-contacts-outline" class="t-icon"></ion-icon>
         <ion-item class="card-text">
-         <p class="t-text">Contact</p>
+         <p class="t-text">Recommendation</p>
         </ion-item>
        </ion-card>
     </ion-col>
-    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
-      <ion-card class="bg-card">
+    </ion-row>
+    <ion-row>
+    <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+      <ion-card class="bg-card" (click)="movetooffer()">
         <ion-icon name="ios-cube-outline" class="t-icon"></ion-icon>
         <ion-item class="card-text">
          <p class="t-text">Offers</p>
         </ion-item>
        </ion-card>
     </ion-col>
-    <ion-col col-4 col-sm-4 col-md-4 col-lg-4 col-xl-4 >
-      <ion-card class="bg-card">
+    <ion-col col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6>
+      <ion-card class="bg-card" (click)="movetofeedback()">
         <ion-icon name="ios-chatboxes-outline" class="t-icon"></ion-icon>
         <ion-item class="card-text">
          <p class="t-text">Feedback</p>

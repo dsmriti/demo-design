@@ -11,6 +11,8 @@ import { InfoPage } from '../pages/info/info';
 import { RecommendPage } from '../pages/recommend/recommend';
 import { AdvertPage } from '../pages/advert/advert';
 import { CoupongeneratePage } from '../pages/coupongenerate/coupongenerate';
+import { OfferPage } from '../pages/offer/offer';
+import { FeedbackPage } from '../pages/feedback/feedback';
 
 
 
@@ -27,7 +29,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     InfoPage,
     RecommendPage,
     AdvertPage,
-    CoupongeneratePage
+    CoupongeneratePage,
+    OfferPage,
+    FeedbackPage
 
   ],
   imports: [
@@ -44,7 +48,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     InfoPage,
     RecommendPage,
     AdvertPage,
-    CoupongeneratePage
+    CoupongeneratePage,
+    OfferPage,
+    FeedbackPage
   ],
   providers: [
     StatusBar,

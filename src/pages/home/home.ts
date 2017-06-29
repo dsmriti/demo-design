@@ -4,6 +4,8 @@ import { CouponPage } from './../coupon/coupon';
 import { InfoPage } from './../info/info';
 import { RecommendPage } from './../recommend/recommend';
 import { AdvertPage } from './../advert/advert';
+import { OfferPage } from './../offer/offer';
+import { FeedbackPage } from './../feedback/feedback';
 
 
 @Component({
@@ -26,6 +28,12 @@ export class HomePage {
   }
   movetoadvert(){
   this.navCtrl.push(AdvertPage);
+  }
+  movetooffer(){
+  this.navCtrl.push(OfferPage);
+  }
+  movetofeedback(){
+  this.navCtrl.push(FeedbackPage);
   }
 
 
