@@ -1,0 +1,47 @@
+page-help {
+  .colorful .list-md{
+    border: none;
+  }
+  .colorful {
+    padding: 50px 16px;
+	background:
+		-webkit-linear-gradient(45deg, hsla(340, 97%, 41%, 1) 0%, hsla(340, 97%, 41%, 0) 70%),
+		-webkit-linear-gradient(315deg, hsla(236, 98%, 44%, 1) 10%, hsla(236, 98%, 44%, 0) 80%),
+		-webkit-linear-gradient(225deg, hsla(259, 93%, 47%, 1) 10%, hsla(259, 93%, 47%, 0) 80%),
+		-webkit-linear-gradient(135deg, hsla(223, 93%, 41%, 1) 100%, hsla(223, 93%, 41%, 0) 70%);
+	background:
+		linear-gradient(45deg, hsla(340, 97%, 41%, 1) 0%, hsla(340, 97%, 41%, 0) 70%),
+		linear-gradient(135deg, hsla(236, 98%, 44%, 1) 10%, hsla(236, 98%, 44%, 0) 80%),
+		linear-gradient(225deg, hsla(259, 93%, 47%, 1) 10%, hsla(259, 93%, 47%, 0) 80%),
+		linear-gradient(315deg, hsla(223, 93%, 41%, 1) 100%, hsla(223, 93%, 41%, 0) 70%);
+	}
+  .p-text{
+    font-size: 22px;
+    word-spacing: 3px;
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin: 10px 0;
+  }
+  .list-md {
+    border-bottom: 1px solid #676565 !important;
+    margin: 1px 0;
+}
+.f-right{
+  float: right;
+  font-size: 22px;
+}
+.mt{
+  margin: 0 auto;
+}
+.f-70{
+  font-size: 70px;
+  color: #13c4a3;
+}
+.help-text{
+  padding: 16px;
+  font-size: 16px;
+
+}
+
+}

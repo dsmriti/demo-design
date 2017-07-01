@@ -13,6 +13,13 @@ import { AdvertPage } from '../pages/advert/advert';
 import { CoupongeneratePage } from '../pages/coupongenerate/coupongenerate';
 import { OfferPage } from '../pages/offer/offer';
 import { FeedbackPage } from '../pages/feedback/feedback';
+import { AccountPage } from '../pages/account/account';
+import { NotificationPage } from '../pages/notification/notification';
+import { ReferPage } from '../pages/refer/refer';
+import { SettingsPage } from '../pages/settings/settings';
+import { HelpPage } from '../pages/help/help';
+import { LogoutPage } from '../pages/logout/logout';
+
 
 
 
@@ -31,7 +38,13 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AdvertPage,
     CoupongeneratePage,
     OfferPage,
-    FeedbackPage
+    FeedbackPage,
+    AccountPage,
+    NotificationPage,
+    ReferPage,
+    SettingsPage,
+    HelpPage,
+    LogoutPage
 
   ],
   imports: [
@@ -50,7 +63,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     AdvertPage,
     CoupongeneratePage,
     OfferPage,
-    FeedbackPage
+    FeedbackPage,
+    AccountPage,
+    NotificationPage,
+    ReferPage,
+    SettingsPage,
+    HelpPage,
+    LogoutPage
+
   ],
   providers: [
     StatusBar,

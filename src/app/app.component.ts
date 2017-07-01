@@ -6,6 +6,15 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
+import { AccountPage } from '../pages/account/account';
+import { NotificationPage } from '../pages/notification/notification';
+import { ReferPage } from '../pages/refer/refer';
+import { SettingsPage } from '../pages/settings/settings';
+import { HelpPage } from '../pages/help/help';
+import { LogoutPage } from '../pages/logout/logout';
+import { OfferPage } from '../pages/offer/offer';
+import { FeedbackPage } from '../pages/feedback/feedback';
+
 
 @Component({
   templateUrl: 'app.html'
@@ -23,8 +32,16 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Home', component: HomePage },
-      
+
       { title: 'Login', component: LoginPage },
+      { title: 'Account', component: AccountPage },
+      { title: 'Notification', component: NotificationPage },
+      { title: 'Offer & Promotion', component: OfferPage },
+      { title: 'Refer & Earn', component: ReferPage },
+      { title: 'Settings', component: SettingsPage },
+      { title: 'Help & Support', component: HelpPage },
+      { title: 'Rate Our App', component: FeedbackPage },
+      { title: 'Logout', component: LogoutPage },
 
     ];
 
