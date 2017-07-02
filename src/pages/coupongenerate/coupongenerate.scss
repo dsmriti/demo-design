@@ -1,7 +1,7 @@
 page-coupongenerate {
   .sound{
     margin: 30px 0;
-    font-size: 200px;
+    font-size: 120px;
    }
   .center{
     margin: 0 auto;
@@ -20,5 +20,19 @@ page-coupongenerate {
     color: #fff;
     background-color: #002642;
 }
-
+.s-mic{
+  position: relative;
+}
+.s-load{
+  font-size: 60px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+ion-spinner * {
+  width: 230px;
+  height: 230px;
+  stroke: #13c4a3;
+  fill: #13c4a3;
+}
 }

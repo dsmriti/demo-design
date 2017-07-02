@@ -4,7 +4,6 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
 import { LoginPage } from '../pages/login/login';
 import { CouponPage } from '../pages/coupon/coupon';
 import { InfoPage } from '../pages/info/info';
@@ -18,10 +17,7 @@ import { NotificationPage } from '../pages/notification/notification';
 import { ReferPage } from '../pages/refer/refer';
 import { SettingsPage } from '../pages/settings/settings';
 import { HelpPage } from '../pages/help/help';
-import { LogoutPage } from '../pages/logout/logout';
-
-
-
+import { CoupondtlPage } from '../pages/coupondtl/coupondtl';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,7 +26,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     CouponPage,
     InfoPage,
@@ -44,7 +39,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReferPage,
     SettingsPage,
     HelpPage,
-    LogoutPage
+    CoupondtlPage
 
   ],
   imports: [
@@ -55,7 +50,6 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage,
     LoginPage,
     CouponPage,
     InfoPage,
@@ -69,7 +63,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     ReferPage,
     SettingsPage,
     HelpPage,
-    LogoutPage
+    CoupondtlPage
 
   ],
   providers: [

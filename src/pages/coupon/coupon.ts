@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { CoupongeneratePage } from './../coupongenerate/coupongenerate';
+import { CoupondtlPage } from './../coupondtl/coupondtl';
 
 
 /**
@@ -22,8 +22,8 @@ export class CouponPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CouponPage');
   }
-  movetogenerate(){
-  this.navCtrl.push(CoupongeneratePage);
+  movetodetail(){
+  this.navCtrl.push(CoupondtlPage);
   }
 
 

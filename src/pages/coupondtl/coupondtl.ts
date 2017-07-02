@@ -2,23 +2,23 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the LogoutPage page.
+ * Generated class for the CoupondtlPage page.
  *
  * See http://ionicframework.com/docs/components/#navigation for more info
  * on Ionic pages and navigation.
  */
 @IonicPage()
 @Component({
-  selector: 'page-logout',
-  templateUrl: 'logout.html',
+  selector: 'page-coupondtl',
+  templateUrl: 'coupondtl.html',
 })
-export class LogoutPage {
+export class CoupondtlPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad LogoutPage');
+    console.log('ionViewDidLoad CoupondtlPage');
   }
 
 }

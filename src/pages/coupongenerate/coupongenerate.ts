@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { CouponPage } from './../coupon/coupon';
 
 /**
  * Generated class for the CoupongeneratePage page.
@@ -14,11 +15,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CoupongeneratePage {
 
+  loadershow:boolean=false;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad CoupongeneratePage');
+  }
+
+  getcoupon(){
+    this.loadershow=true;
+
+let _this=this;
+    setTimeout(function(){
+      _this.navCtrl.setRoot(CouponPage);
+    }, 3000);
+
+
   }
 
 }

@@ -5,11 +5,12 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar>
-    <ion-title>Coupons</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Coupon</ion-title>
   </ion-navbar>
-
 </ion-header>
 
 
@@ -17,15 +18,15 @@
   <ion-list>
   <ion-item>
     <ion-thumbnail item-start>
-      <img src="../assets/images/coupon1.png">
+      <img src="assets/images/coupon1.png">
     </ion-thumbnail>
     <h2>Coupon 1</h2>
     <p>Get your coupon</p>
-    <button ion-button clear item-end (click)="movetogenerate()">View</button>
+    <button ion-button clear item-end (click)="movetodetail()">View</button>
   </ion-item>
   <ion-item>
     <ion-thumbnail item-start>
-      <img src="../assets/images/coupon2.png">
+      <img src="assets/images/coupon2.png">
     </ion-thumbnail>
     <h2>Coupon 2</h2>
     <p>Get your coupon</p>
@@ -33,7 +34,7 @@
   </ion-item>
   <ion-item>
     <ion-thumbnail item-start>
-      <img src="../assets/images/coupon3.png">
+      <img src="assets/images/coupon3.png">
     </ion-thumbnail>
     <h2>Coupon 3</h2>
     <p>Get your coupon</p>
@@ -41,14 +42,14 @@
   </ion-item>
   <ion-item>
     <ion-thumbnail item-start>
-      <img src="../assets/images/coupon4.png">
+      <img src="assets/images/coupon4.png">
     </ion-thumbnail>
     <h2>Coupon 4</h2>
     <p>Get your coupon</p>
     <button ion-button clear item-end>View</button>
   </ion-item><ion-item>
     <ion-thumbnail item-start>
-      <img src="../assets/images/coupon5.png">
+      <img src="assets/images/coupon5.png">
     </ion-thumbnail>
     <h2>Coupon 5</h2>
     <p>Get your coupon</p>

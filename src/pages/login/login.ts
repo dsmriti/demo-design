@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ListPage } from './../list/list';
 
 /**
  * Generated class for the LoginPage page.
@@ -21,10 +20,6 @@ export class LoginPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');
 
-  }
-  movetolist(){
-  //this.navCtrl.push(ListPage);
-  this.navCtrl.setRoot(ListPage);
   }
 
 }

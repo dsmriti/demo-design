@@ -17,7 +17,10 @@
   <ion-grid>
     <p class="coupon-title">Get your Coupon ..!</p>
     <ion-row class="center">
-      <ion-col col-12>
+      <ion-col col-12 class="s-mic">
+        <div class="s-load" *ngIf="loadershow" >
+          <ion-spinner></ion-spinner>
+        </div>
 
         <ion-icon name="ios-mic-outline" class="sound"></ion-icon>
 
@@ -26,7 +29,8 @@
 
   <ion-row class="center">
     <ion-col col-12 class="m-50">
-  <button ion-button round class="f-18">Get Coupon</button>
+      <p *ngIf="loadershow">Generating your Coupon</p>
+  <button ion-button round class="f-18" (click)="getcoupon()">Get Coupon</button>
 </ion-col>
 </ion-row>
 </ion-grid>
