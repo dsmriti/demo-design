@@ -41,7 +41,6 @@ export class MyApp {
       { title: 'Settings', component: SettingsPage },
       { title: 'Help & Support', component: HelpPage },
       { title: 'Rate Our App', component: FeedbackPage },
-      { title: 'Detail', component: CoupondtlPage },
 
     ];
 

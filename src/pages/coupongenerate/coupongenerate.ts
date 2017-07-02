@@ -28,9 +28,9 @@ export class CoupongeneratePage {
     this.loadershow=true;
 
 let _this=this;
-    setTimeout(function(){
-      _this.navCtrl.setRoot(CouponPage);
-    }, 3000);
+     setTimeout(function(){
+       _this.navCtrl.setRoot(CouponPage);
+     }, 3000);
 
 
   }

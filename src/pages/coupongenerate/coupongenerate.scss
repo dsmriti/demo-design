@@ -23,16 +23,31 @@ page-coupongenerate {
 .s-mic{
   position: relative;
 }
-.s-load{
-  font-size: 60px;
-  position: absolute;
-  top: 0%;
-  left: 0%;
-}
-ion-spinner * {
-  width: 230px;
-  height: 230px;
-  stroke: #13c4a3;
-  fill: #13c4a3;
+div.spinner {
+        text-align: center;
+        stroke: green ;
+        fill:  green ;
+    }
+.spinner svg {
+        width: 200px;
+        height: 200px;
 }
 }
+// .s-load{
+//   font-size: 60px;
+//   position: absolute;
+//   top: 0%;
+//   left: 0%;
+// }
+// ion-spinner * {
+//   width: 230px;
+//   height: 230px;
+//   stroke: #13c4a3;
+//   fill: #13c4a3;
+// }
+// spinner-md-crescent circle {
+//     stroke: #13c4a3 !important;
+// }
+// .spinner-crescent circle {
+//     stroke-width: 2px !important;
+// }
