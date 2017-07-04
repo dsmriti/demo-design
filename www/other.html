@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+<title>Personal Movement Steps Tracking </title>
+<link href="templates/yoo_enterprise/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+<link rel="stylesheet" href="widgetkit.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/reset.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/layout.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/typography.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/menus.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/modules.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/system.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/extensions.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/stylesheet.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/custom.css">
+<link rel="stylesheet" href="templates/yoo_enterprise/css/brightcove.css">
+<style type="text/css">
+body {
+	min-width: 960px;
+}
+.wrapper {
+	width: 960px;
+}
+#main-shift {
+	margin-right: 310px;
+}
+#right {
+	width: 300px;
+	margin-left: -300px;
+}
+#menu .dropdown {
+	width: 230px;
+}
+  
+  
+  
+div#poll_loading_148 {
+	background: url(media/system/images/mootree_loader.gif) 0% 50% no-repeat;
+	width: 100%;
+	height: 20px;
+	padding: 4px 0 0 20px;
+}
+</style>
+
+<script src="media/system/js/core.js"></script>
+<script src="media/system/js/caption.js"></script>
+<script src="media/widgetkit/js/jquery.js"></script>
+<script src="media/widgetkit/js/jquery.plugins.js"></script>
+<script src="media/widgetkit/js/responsive.js"></script>
+<script src="media/widgetkit/widgets/accordion/js/accordion.js"></script>
+<script src="media/widgetkit/widgets/gallery/js/lazyloader.js"></script>
+<script src="media/widgetkit/widgets/map/js/lazyloader.js"></script>
+<script src="media/widgetkit/widgets/slideset/js/lazyloader.js"></script>
+<script src="media/widgetkit/widgets/slideshow/js/lazyloader.js"></script>
+<script src="media/widgetkit/widgets/twitter/twitter.js"></script>
+<script src="templates/yoo_enterprise/warp/js/warp.js"></script>
+<script src="templates/yoo_enterprise/warp/js/dropdownmenu.js"></script>
+<script src="templates/yoo_enterprise/js/template.js"></script>
+
+<script src="js/widgetkit.js"></script>
+<script src="media/system/js/mootools-more.js"></script>
+<script>
+var Warp = Warp || {}; Warp.Settings = { tplurl: '/templates/yoo_enterprise', color: 'default' };
+/* <![CDATA[ */
+window.addEvent('load', function()
+    {
+		$('poll_vote_148').addEvent('submit', function(e) {
+				// Prevent the submit event
+			    new Event(e).stop();
+
+				var options = $('poll_vote_148').getElements('input[name=voteid]');
+
+				var nothing_selected = 1;
+				
+				options.each(function(item, index){
+					if(item.checked==1) {
+						nothing_selected = 0;
+					}
+				});
+				
+				if (nothing_selected) {
+					alert('Please select an option');
+					return false;
+				}
+				else {
+					$('submit_vote_148').disabled = 1;
+					$('poll_loading_148').setStyle('display', '');
+					
+					// Update the page
+					this.set('send', {
+					onComplete: function(response, responseXML)
+					{						
+						// get the XML nodes
+						var root    = responseXML.documentElement;
+						var options = root.getElementsByTagName('option');
+						var text    = root.getElementsByTagName('text');
+						var voters  = root.getElementsByTagName('voters');
+						
+						// update the page element
+						var slide = new Fx.Slide('polldiv_148').hide();
+						$('polldiv_148').innerHTML = '<div style="width:100%"><div style="padding: 3px;">' + text.item(0).firstChild.nodeValue + ' - ' + options.item(0).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder0" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(0).attributes[0].nodeValue+'" style="background:#' + options.item(0).attributes[2].nodeValue + '; width:' + options.item(0).attributes[1].nodeValue + '%; height:10px;"></div></div></div><div style="width:100%"><div style="padding: 3px;">' + text.item(1).firstChild.nodeValue + ' - ' + options.item(1).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder1" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(1).attributes[0].nodeValue+'" style="background:#' + options.item(1).attributes[2].nodeValue + '; width:' + options.item(1).attributes[1].nodeValue + '%; height:10px;"></div></div></div><div style="width:100%"><div style="padding: 3px;">' + text.item(2).firstChild.nodeValue + ' - ' + options.item(2).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder2" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(2).attributes[0].nodeValue+'" style="background:#' + options.item(2).attributes[2].nodeValue + '; width:' + options.item(2).attributes[1].nodeValue + '%; height:10px;"></div></div></div><div style="width:100%"><div style="padding: 3px;">' + text.item(3).firstChild.nodeValue + ' - ' + options.item(3).attributes[1].nodeValue + '%</div><div class="poll_module_bar_holder" id="poll_module_bar_holder3" style="width: 98%; height: 10px; padding:1px; border:1px solid #cccccc;"><div id="poll_module_bar'+options.item(3).attributes[0].nodeValue+'" style="background:#' + options.item(3).attributes[2].nodeValue + '; width:' + options.item(3).attributes[1].nodeValue + '%; height:10px;"></div></div></div><br /><b>Total votes</b>: ' + voters.item(0).firstChild.nodeValue + '';
+						slide.slideIn();
+					}
+					}).send();
+				}
+        });  
+    });</script>
+<link rel="apple-touch-icon" href="templates/yoo_enterprise/apple_touch_icon.png" />
+
+<!-- Google Analytics -->
+<script src="js/google-analytics.js"></script>
+</head>
+
+<body id="page" class=" yoopage  column-right  language_  cid- id-831 task- catid- option-com_content itemid-105 view-article productid-">
+<div id="page-body">
+  <div class="wrapper">
+    <div id="main-header" class="nocontent"></div>
+    
+    <div id="middle">
+      <div id="middle-expand">
+        <div id="main">
+          <div id="main-shift">
+            <div id="mainmiddle">
+              <div id="mainmiddle-expand">
+                <div id="content">
+                  <div id="content-shift">
+                    <div class="wrapper-t1">
+                      <div class="wrapper-t2">
+                        <div class="wrapper-t3"></div>
+                      </div>
+                    </div>
+                    <div class="wrapper-1">
+                      <div class="wrapper-2">
+                        <div class="wrapper-3">
+                          <div id="system-message-container"> </div>
+                          <div id="system" class="">
+                            <div class="item">
+                              <h1 class="title"> Get Active – Personal Movement Steps Tracking  </h1>
+                              <div class="push_all">
+                                <div class="push_like">
+                                  <div id="watch_action">
+                                    <div id="watch_position" style="float:left; " >
+                                      <div id="action_like" > <span class="like-831 like"><img class="lbg-default jlk" src="plugins/content/jlikeit/jlikeit/images/pixel.gif"></span> <span id="lc-831" class="lc">0 like this.</span> </div>
+                                      <div id="action_unlike" > <span class="unlike-831 unlike"><img class="unlbg-default jlk" src="plugins/content/jlikeit/jlikeit/images/pixel.gif"></span> <span id="unlc-831" class="unlc">0 don't like this.</span> </div>
+                                    </div>
+                                    <div id="status-831" class="status" style="float:left; "  > </div>
+                                  </div>
+                                  <div id="clear"></div>
+                                </div>
+                                <div class="push_print">
+                                  <div class="clearout"></div>
+                                </div>
+                                <div class="clearout"></div>
+                              </div>
+                              <div class="content">
+                                <h6>You could earn $100 in 2017 by tracking 1 million steps with Jiff between May 1 and Oct. 31, 2017.</h6>
+                                <p>To successfully complete this wellness activity for a 2017 wellness incentive, you'll need to:</p>
+                                <ol>
+                                  <li>Successfully track and sync 1 million steps with Jiff between May 1 and Oct. 31, 2017:
+                                    <ul class="wallent-incentive inner-list">
+                                      <li>Download the Jiff-Health Benefits app, available on the App Store or Google Play or log on to <strong>app.jiff.com</strong> with your Jiff email and password.</li>
+                                      <p>Please note:</p>
+                                      <ul>
+                                      <li class="list-circle"><strong>	The Jiff-Health Benefits app is different than the Jiff Challenges App used for Good Life Moves Challenges. You will need the Jiff-Health Benefits App for this wellness activity.</strong></li>
+                                       <li class="list-circle">Although there are two Jiff Apps, you only have ONE Jiff account. Therefore, if you have already participated in Jiff Challenges, simply sign into the Jiff-Health Benefits App with the same login information. </li>
+                                        <li class="list-circle">If you’re new to Jiff, you’ll need to activate your Jiff account by using the token AllFit4Life. </li>
+                                      </ul>
+                                      
+                                      
+                                      
+                                      <li>Follow the instructions to sync a compatible tracker or free app to track your steps in the “Get Active” program. </li>
+                                      <li><strong>Sync your tracker to your app at least every 14 days to ensure you get credit for your steps.</strong></li>
+                                      <li>Track at least 1 million steps with Jiff between May 1 and Oct. 31, 2017.<em>Only step data collected by an activity tracking device or mobile tracking app that is compatible and synced to Jiff will count towards this wellness activity.</em></li>
+                                    </ul>
+                                  </li>
+                                  <p><strong>AND</strong></p>
+                                  <li>Not have already earned $200 in 2017 wellness incentives.</li>
+                                </ol>
+                            
+                                <p>Note: If you have earned a wellness incentive for a Good Life Moves Challenge, you are eligible to earn a wellness incentive for the Get Active Personal Movement StepsTracking, as long as you have not already earned $200 in 2017 wellness incentives.</p>
+                                <p>
+                                <div id="accordion-350-5835df1a73759" class="wk-accordion wk-accordion-default clearfix"  data-widgetkit="accordion" data-options='{"style":"default","collapseall":1,"matchheight":1,"index":-1,"duration":500,"width":"auto","order":"default"}'>
+                                  <h3 class="toggler">What mobile devices are supported by Jiff?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                      <p>Supported mobile devices include iOS 9.0+, Android 4.0+ <em>(users with Android 2.3 phones should use their desktop browser for the best experience).</em>Please see Jiff’s Help Center article for the most up-to-date information.</p>
+                                     
+                                    </div>
+                                  </div>
+                                  <h3 class="toggler">Is my spouse/domestic partner able to participate?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                     <ul>
+                                     <li>Spouses/domestic partners enrolled in an Allstate Medical Plan coverage option are eligible to participate in Personal Movement Steps Tracking through Jiff-Health Benefits. </li>
+                                     <li>
+                                     They sign in (if a previous Jiff-Health Benefits user) or activate their account (if new to Jiff-Health Benefits – with token AllFit4Life) the same way an employee/associate would.
+                                     </li>
+                                     </ul>
+                                    </div>
+                                  </div>
+                                  <h3 class="toggler">What do the points mean in the Jiff Health Benefits App?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                     <ul>
+                                     <li>The points are to help motivate you on your daily tracking progress.</li>
+                                     <li>
+                                    Earn 500 points and cash them in for an entry into a sweepstakes this fall (details to be announced.) <em>Note: Points do not represent or have any relation to your 2017 wellness incentive eligibility or completion status.</em>
+                                     </li>
+                                     </ul>
+                                    </div>
+                                  </div>
+                                  <h3 class="toggler">I do not have a tracker/smart phone/personal PC. Can I still participate?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                     <ul>
+                                     <li>To participate in this wellness activity you must be able to track your steps with a compatible activity tracker or free app and sync to the Jiff platform.</li>
+                                     <li>
+                                    If you do not have a smart phone, you can purchase a tracker that can sync to your personal PC. 
+                                     </li>
+                                     <li>If you do not have a smart phone or a personal PC, you may not be able to participate in this wellness activity as Allstate computers do not recognize external software such as an activity tracker USB dongle.  See the 2017 menu of wellness activities for other choices.</li>
+                                     </ul>
+                                    </div>
+                                  </div>
+                                  <h3 class="toggler">Can I earn a wellness incentive for the Personal Movement Steps Tracking if I’ve already earned an incentive for a Good Life Moves Challenge?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                     <p>Yes, as long as you have not already earned $200 in wellness incentives for the year.</p>
+                                    </div>
+                                  </div>
+                                  
+                                  <h3 class="toggler">How do I record my completion of the Personal Movement Steps Tracking?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                     <ul>
+                                     <li>There is no action required from you to record your completion of this wellness activity.</li>
+                                     <li>
+                                   	Your completion of this activity will be reported directly from Jiff to the Allstate Benefits Center which processes all wellness incentives.
+                                     </li>
+                                     </ul>
+                                    </div>
+                                  </div>
+                                  
+                                  <h3 class="toggler">When will I receive my $100 wellness incentive?</h3>
+                                  <div>
+                                    <div class="content wk-content clearfix">
+                                     <p>In most cases, you'll receive your $100 wellness incentive within 45 calendar days after the Personal Movement Steps Tracking activity ends.*</p>
+                                     &nbsp;
+                                      <table class="dark">
+                                        <tbody>
+                                          <tr align="center">
+                                            <th><strong>If you’re:</strong></th>
+                                            <th valign="top"><strong>Your 2017 wellness incentive:</strong></th>
+                                          </tr>
+                                          <tr>
+                                            <td><p>Enrolled in:</p>
+                                              <p><ul><li class="list-padding">Blue Advantage HMO</li></ul></p></td>
+                                            <td>Is deposited into a <a href="health_reimbursement.html">Health Reimbursement Arrangement (HRA)</a></td>
+                                          </tr>
+                                          <tr>
+                                            <td><p>Enrolled in:</p>
+                                              <ul><li class="list-padding">Allstate Medical Savings Plan</li>
+                                              <li class="list-padding">Allstate Medical Value Plan</li>
+                                              <li class="list-padding">Kaiser Savings HMO</li>
+                                              <li class="list-padding">Kaiser Value HMO</li></ul></td>
+                                            <td>Is deposited into a <a href="health_savings_overview.html">Health Savings Account (HSA)</a></td>
+                                          </tr>
+                                          <tr>
+                                            <td>Not enrolled in an Allstate Medical Plan coverage option</td>
+                                            <td>Is paid to you through payroll and is subject to all applicable taxes.</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                      <p><em>*Provided that you have not yet earned $200 in wellness incentives in 2017.</em></p>
+                                    </div>
+                                  </div>
+                                </div>
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="wrapper-b1">
+                      <div class="wrapper-b2">
+                        <div class="wrapper-b3"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- content end --> 
+                
+              </div>
+            </div>
+            
+            <!-- mainmiddle end --> 
+            
+          </div>
+        </div>
+        <div id="right">
+        <img src="images/stories/JiffSidebar2.jpg" height="195" width="300">
+          
+         <div id="module-nopad-questions"></div>
+        
+         
+          <div class="module  bg-blue    last">
+            <div class="poll bg-blue" style="border:none; padding:1px;">
+             <script type="text/javascript" charset="utf-8" src="http://static.polldaddy.com/p/9683316.js"></script>
+<noscript><a href="http://polldaddy.com/poll/9683316/">To earn your Wellness Incentives, what would you prefer to track?</a></noscript>
+              <div id="poll_links" style="padding-top:5px; "> </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="bottom">
+      <div class="bottomblock width100 float-left">
+        <div class="module mod-box mod-box-header   first last">
+          <div class="box-t1">
+            <div class="box-t2">
+              <div class="box-t3"></div>
+            </div>
+          </div>
+          <div class="box-1">
+            <div class="box-2">
+              <div class="box-3 deepest ">
+                <div class="custom"  >
+                  <table style="width: 640px; border: 1px solid #ccc; border-radius: 10px; padding: 10px;">
+                    <tbody>
+                      <tr>
+                        <td>If you require a personal response, please <a href="contacts.html">contact</a> the appropriate party.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="box-b1">
+            <div class="box-b2">
+              <div class="box-b3"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- bottom end -->
+    
+    <div id="main-footer" class="nocontent"></div>
+    
+  </div>
+</div>
+<script>window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e89d56e69b","applicationID":"13764385","transactionName":"NVUHMRFWXkYHUUMKDQwfJAYXXl9bSXFYDRYHXhEmDFlERwleWwYQTVQMFhNbUUw=","queueTime":0,"applicationTime":268,"atts":"GRIER1lMTUg=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+<!-- Event Tracking -->
+<script src="js/event-tracking.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
